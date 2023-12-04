@@ -1,0 +1,667 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+    header{
+        position: relative;
+        height:75px ;
+    }
+    
+
+
+
+/* Fuente personalizada */
+@font-face {
+    font-family: 'MiFuente';
+    src: url('BlackOpsOne-Regular.ttf') format('truetype');
+}
+
+div {
+    margin-bottom: 1rem;
+}
+
+/* Estilos para el cuerpo del sitio */
+body {
+    width: 100vw;
+    font-family: 'MiFuente', sans-serif;
+    background-color: #000000;
+    color: #68104f;
+    margin: 0;
+    background-size: cover;
+    /* font-weight: bold; */
+}
+
+p,h2,h3,h4 {
+    font-weight: 400;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    /* display: grid;
+    grid-template-rows: 80px 1fr 100px; */
+    gap: 5px;
+    margin-top: 4%;
+    padding: 1.25% 1.25% 0 1.25%;
+    /* grid-template-areas:
+        'header header header header' 1fr
+        'izq main main main' 1fr 
+        'izq main main main' 1fr
+        'izq main main main' 1fr
+        'footer footer footer footer' 1fr; */
+}
+
+/* Header */
+.item1 {
+    grid-area: header;
+    margin-bottom: 0;
+    margin: 20px;
+}
+
+header>h1 {
+    color: #D694C3;
+}
+
+/* Sidebar */
+.item2 {
+    width: 25%;
+    grid-area: izq;
+    background-color: #FFAFCE;
+    border-radius: 1.875rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.item2 img {
+    max-width: 100%;
+    height: auto !important;
+}
+
+.item2>p {
+    font-weight: 400;
+    justify-self: start;
+}
+
+.item3 img {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Contenido principal */
+.item3 {
+    width: 75%;
+    grid-area: main;
+    background-color: #FFAFCE;
+    border-radius: 1.875rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+    /* padding: 1.25rem;  */
+    margin-bottom: 1.25%;
+}
+
+/* Footer */
+.item4 {
+    grid-area: footer;
+    background-color: #54264C;
+    color: #D694C3;
+    margin: 0;
+    width: 100%;
+}
+
+/* Publicidad */
+#item5 {
+    grid-area: publi;
+    margin-top: 0;
+}
+
+
+/* Estilos de navegación */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0.875rem 1.25rem;
+    border-radius: 0.625rem;
+    background-color: rgba(200, 110, 185, 0.800);
+    box-sizing: content-box;
+}
+
+.linav:first-child {
+    border-radius: .625rem 0 0 .625rem;
+}
+
+.linav:last-child {
+    border-radius: 0 .625rem .625rem 0;
+}
+
+.linav {
+    padding: 1.25rem;
+}
+
+.linav:hover {
+    background-color: rgb(173, 3, 148);
+    animation-name: nav-anim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+a {
+    color: pink;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.foto1,
+.foto2,
+.foto3,
+.foto4 {
+    max-width: 100%;
+    height: auto;
+}
+
+.Tienda {
+    background-color: #68104f;
+}
+
+@keyframes nav-anim {
+    0% {
+        background-color: rgba(200, 110, 185, 0.800);
+    }
+
+    50% {
+        background-color: #d0b;
+    }
+
+    100% {
+        background-color: rgba(200, 110, 185, 0.800);
+    }
+}
+
+.cuadro1 article {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.25rem;
+    box-sizing: border-box;
+}
+
+.cuadro1 h1,
+.cuadro1 h2,
+.cuadro1 p {
+    margin-bottom: 1.25rem;
+}
+
+.bienvenido {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.cuadro1 p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+
+
+/* Estilos de header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(200, 110, 185, 0.800);
+    padding: 0 0 0 1rem;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.headerhome {
+    font-size: 36px;
+    margin: 0;
+    color: #D694C3;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+/* Estilos de sponsors */
+.ulsponsors {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.sponsors {
+    height: 1px;
+    width: 1px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    /* background-color: #F3BFCA; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img:hover {
+    transform: scale(95%);
+}
+
+.circle img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+
+.derechos {
+    font-size: 1.25rem;
+    margin-top: 50px;
+}
+
+/* Estilos de calendario */
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-amplio {
+    grid-area: izq / main;
+    color: #fff;
+
+}
+
+
+/* Estilos de eventos */
+ul {
+    list-style-type: none;
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+}
+.mes {
+    background-color: rgba(200, 110, 185, 0.300);
+    margin: 0px 20px;
+    padding: 50px 25px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.diadesemana {
+    margin: 0px 20px;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: rgba(200, 110, 185, 0.800);
+}
+
+ul li {
+    padding: 5px 0px;
+}
+
+.diadesemana li {
+    display: inline-block;
+    width: 13.6%;
+}
+
+.dias {
+    margin: 0px 20px;
+    padding: 10px 0px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    text-align: center;
+    background-color: rgba(200, 110, 185, 0.300);
+}
+
+.dias li {
+    display: inline-block;
+    width: 13.6%;
+}
+
+.active {
+    color: pink;
+    background-color: #d0b;
+}
+
+#torneo{
+    width: 50%;
+}
+.nombretorneo {
+    font-size: 20px;
+}
+
+.eventos {
+    margin: 10px 50px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.titulo {
+    background-color: rgba(200, 110, 185, 0.250);
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 10px 0px;
+}
+
+/* CONTACTO */
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.redes img {
+    width: 48px;
+}
+
+.redes li {
+    margin-right: 10px;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.datos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input[type="text"] {
+    border-radius: 6px;
+    border: 1px solid #54264C;
+    height: 30px;
+    background-color: #FFAFCE;
+    box-shadow: inset 0 0 5px 1px #54264C;
+    font-family: 'MiFuente';
+    font-style: italic;
+}
+
+.formulario input[type="checkbox"] {
+    display: none;
+}
+
+.formulario input[type="checkbox"]+label {
+    font-weight: 400;
+    padding: 4px;
+}
+
+.formulario input[type="checkbox"]:checked+label {
+    border-radius: 6px;
+    background-color: #500d3d;
+    color: #D694C3;
+}
+
+input[type="submit"] {
+    border-radius: 6px;
+    background-color: #500d3d;
+    color: #D694C3;
+    font-weight: 400;
+    padding: 4px;
+}
+
+/* Estilos de main */
+main {
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: stretch;
+}
+#div
+
+/* Estilos de footer */
+footer {
+    margin-top: 0;
+}
+
+.halloffame {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Equipo */
+
+.halloffame-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.halloffame {
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+.logros {
+    border: 2px;
+    border-radius: 10px;
+    /* background-color: #f7a9c7; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.estadisticas{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.estadisticaIndiv{
+    background-color: #D694C355;
+    border-radius: 1.875rem;
+    width: 98%;
+    padding: 0 10px;
+}
+.logros h2 {
+    color: #500d3d;
+}
+
+.logros p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.logros .stat {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ff5733;
+}
+
+.logros .description {
+    font-style: italic;
+    color: #555;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.titulo {
+    background-color: rgba(200, 110, 185, 0.250);
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: rotate(10deg);
+}
+
+.headerhome {
+    font-size: 36px;
+    margin: 0;
+    color: #D694C3;
+    transition: color 0.3s;
+}
+
+.headerhome:hover {
+    color: #FFAFCE;
+}
+
+#textoBuscador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#textoBuscador>h2,p{
+    width: 90%;
+}
+
+.contenedorOfertas{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color:#FFAFCE ;
+    margin:20px;
+    border-radius: 1.875rem ;
+}
+.contenedorJuego{
+    margin: 10px 0;   
+    width: 300px ;
+    box-shadow: 0 0 15px 5px #500d3d66;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1.875rem;
+}
+.imgJuego{
+    height: 300px;
+}
+.contenedorJuego img{
+    border-radius:1.875rem ;
+}
+.contenedorJuego a{
+    color: inherit;
+}
+.contenedorJuego:hover{
+    transform: scale(99%);
+    box-shadow: inset 0 0 15px 7px #500d3d66;
+    background-color: #f7acc8;
+    font-weight: 400;
+}
+.precio{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.precio>p{
+    text-decoration: line-through;
+}
+
+@media (max-width: 845px){
+    .headerhome{
+        display: none;
+    }
+    nav{
+        width: 90%;
+    }
+    .ulnav{
+        display: flex;
+        justify-content: space-around;
+    }
+    .headerhome{
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .contenedor {
+        /* grid-template-columns: 1fr;texto
+        grid-template-areas:
+            'header'
+            'main'
+            'main'
+            'footer'; */
+    }
+    main{
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
+    }
+        .item2, .item3, #torneo{
+            width: 100%;
+    }
+}
+
+@media (max-width: 375px){
+    header{
+        margin: 0;
+        padding: 0;
+    }
+    nav{
+        width: 90%;
+    }
+    .ulnav{
+        width: 100%;
+        justify-content: space-around;
+        margin: auto 0;
+    }
+    .ulnav li{
+        margin: 0px;
+        padding: 5px 0;
+    }
+}
